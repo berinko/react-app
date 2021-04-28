@@ -6,9 +6,9 @@ const Student = ({ match, history }) => {
     const [id] = useState(match.params.id);
     const [student, setStudent] = useState({
         _id: '0',
-        name: '',
-        lname: '',
-        birth: 0,
+        firstName: '',
+        lastName: '',
+        yearOfBirth: 0,
         adress: ''
     });
 
@@ -57,23 +57,23 @@ const Student = ({ match, history }) => {
             <h2>Student</h2>
             <form className="input-form">
               <div style={{margin: '12px 0'}}>
-                <label htmlFor='name'>First Name :</label>
+                <label htmlFor='firstName'>First Name :</label>
                 <input type='text'
-                       name ='name' 
+                       name ='firstName' 
                        value={student.firstName}
                        onChange={changeHandler} />  
               </div>  
               <div style={{margin: '12px 0'}}>
-                <label htmlFor='lname'>Last Name :</label>
+                <label htmlFor='lastName'>Last Name :</label>
                 <input type='text'
-                       name ='lname'
+                       name ='lastName'
                        value={student.lastName}
                        onChange={changeHandler} />  
               </div> 
               <div style={{margin: '12px 0'}}>
-                <label htmlFor='birth'>Year of Birth :</label>
+                <label htmlFor='yearOfBirth'>Year of Birth :</label>
                 <input type='text'
-                       name ='birth'
+                       name ='yearOfBirth'
                        value={student.yearOfBirth}
                        onChange={changeHandler} />  
               </div> 
